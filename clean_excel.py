@@ -172,12 +172,12 @@ def merge_rows_from_index(df, start_index=3):
     result_df = pd.DataFrame(result_rows, columns=df.columns)
     result_df.reset_index(drop=True, inplace=True)
     
-    return result_df
+    return result_df    
 
 # Usage:
 # df_merged = merge_rows_from_index(df, start_index=4)
 
-input_file = r"C:\Users\isarivelan.mani\repo\rag-chatbot\backend\adnoc\0751\task03\merged_format_1.xlsx"
+input_file =  r"merged_format_1.xlsx"
 df = clean_excel_file(input_file)
 count = df['Loop Component'].notna().sum()
 print(count)
